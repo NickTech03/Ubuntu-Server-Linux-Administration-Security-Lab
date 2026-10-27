@@ -124,14 +124,16 @@ The virtual machine and supporting lab files were maintained on an external SSD.
 
 Six annotated screenshots were prepared to highlight important technical outcomes for the public portfolio.
 
+
 | Evidence | Demonstrated activity |
 |---|---|
-| P02-04 | Ubuntu installation and initial operating system verification |
-| P02-09 | Standard user privilege restriction |
-| P02-12 | Linux group-based access control |
-| P02-13 | Linux service management and recovery |
-| P02-15 | SSH access restriction and authentication verification |
-| P02-16 | Final system-health verification |
+| [P02-04](Portfolio-Screenshots/P02-04-Ubuntu-First-Login-OS-Verification-Annotated.png) | Ubuntu installation and initial operating system verification |
+| [P02-09](Portfolio-Screenshots/P02-09-Linux-User-Privilege-Verification-Annotated.png) | Standard user privilege restriction |
+| [P02-12](Portfolio-Screenshots/P02-12-Linux-Group-Access-Control-Annotated.png) | Linux group-based access control |
+| [P02-13](Portfolio-Screenshots/P02-13-Linux-Service-Management-Annotated.png) | Linux service management and recovery |
+| [P02-15](Portfolio-Screenshots/P02-15-SSH-Access-Control-Verification-Annotated.png) | SSH access restriction and authentication verification |
+| [P02-16](Portfolio-Screenshots/P02-16-Final-System-Health-Verification-Annotated.png) | Final system-health verification |
+
 
 The annotated screenshots will be included in this repository as supporting visual evidence.
 
