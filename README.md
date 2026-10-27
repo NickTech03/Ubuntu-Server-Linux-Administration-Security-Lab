@@ -135,7 +135,7 @@ Six annotated screenshots were prepared to highlight important technical outcome
 | [P02-16](Portfolio-Screenshots/P02-16-Final-System-Health-Verification-Annotated.png) | Final system-health verification |
 
 
-The annotated screenshots will be included in this repository as supporting visual evidence.
+The six annotated screenshots are included in the Portfolio-Screenshots folder as supporting visual evidence. Each screenshot is linked above for direct review.
 
 The complete set of 16 original screenshots remains preserved with the local project documentation.
 
