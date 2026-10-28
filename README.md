@@ -139,6 +139,88 @@ The six annotated screenshots are included in the Portfolio-Screenshots folder a
 
 The complete set of 16 original screenshots remains preserved with the local project documentation.
 
+## Technical Evidence Highlights
+
+The following annotated screenshots demonstrate selected results from the Ubuntu Server lab. Each example highlights the technical activity performed, the verification evidence, and its relevance to Linux administration or security.
+
+### 1. Ubuntu Server Installation and OS Verification
+
+After installing Ubuntu Server in Oracle VirtualBox, I signed in using the administrator account and verified the operating system version with `cat /etc/os-release`.
+
+The output confirmed that Ubuntu Server 26.04.1 LTS was installed successfully. This established a verified starting point for the remaining Linux administration and security exercises.
+
+![Ubuntu Server installation and OS verification](Portfolio-Screenshots/P02-04-Ubuntu-First-Login-OS-Verification-Annotated.png)
+
+### 2. Linux User Privilege Verification
+
+I created a standard Linux user account, `labuser1`, to practice account administration and verify the separation between standard and administrative privileges.
+
+Using `id` and `groups`, I inspected the account's identity and group memberships. I then tested whether the standard account could perform administrative operations using `sudo`.
+
+The result confirmed that `labuser1` was not authorized to use `sudo`. This demonstrated the principle of least privilege, where users receive only the permissions necessary for their responsibilities.
+
+![Linux user privilege verification](Portfolio-Screenshots/P02-09-Linux-User-Privilege-Verification-Annotated.png)
+
+### 3. Linux Group Access Control
+
+I created a Linux group named `labshare` to practice managing shared directory access between authorized users.
+
+I configured a shared directory under `/tmp/linux-permissions-lab/shared`, assigned the appropriate group ownership, and adjusted directory permissions to allow controlled collaboration.
+
+I tested access using the standard account `labuser1` and verified that authorized group members could access and modify shared files.
+
+I also enabled the setgid permission on the shared directory and verified that newly created files inherited the directory's group ownership.
+
+This exercise demonstrated how Linux file permissions, group membership, and setgid inheritance work together to support secure collaboration and consistent access control.
+
+![Linux group access control verification](Portfolio-Screenshots/P02-12-Linux-Group-Access-Control-Annotated.png)
+
+### 4. Linux Service Management
+
+I practiced managing Linux system services using `systemctl`, focusing on the `cron.service` scheduling service.
+
+I inspected the service's current status using `systemctl status cron.service` and verified whether it was active.
+
+I then stopped the service using `sudo systemctl stop cron.service` and checked its status again to confirm that it had become inactive.
+
+After verifying the stopped state, I restarted the service using `sudo systemctl start cron.service` and confirmed that it returned to an active state.
+
+This exercise demonstrated how system administrators can control services, verify their operating states, and restore normal functionality after a service interruption.
+
+![Linux service management verification](Portfolio-Screenshots/P02-13-Linux-Service-Management-Annotated.png)
+
+### 5. SSH Access Control Verification
+
+I configured OpenSSH Server on Ubuntu Server to practice securing remote administrative access.
+
+I reviewed the effective SSH authentication settings and created a dedicated SSH configuration file containing `AllowUsers labadmin` to restrict SSH access to the authorized administrator account.
+
+After validating the SSH configuration, I tested remote authentication using both the administrator account `labadmin` and the standard account `labuser1`.
+
+The administrator account was able to authenticate successfully, while the standard account was denied access.
+
+I then reviewed SSH authentication logs using `journalctl` to verify that the access restriction was being enforced.
+
+This exercise demonstrated the importance of least privilege, secure remote access configuration, and log-based verification when managing Linux systems.
+
+![SSH access control verification](Portfolio-Screenshots/P02-15-SSH-Access-Control-Verification-Annotated.png)
+
+### 6. Final System Health Verification
+
+After completing the Linux administration, security configuration, and troubleshooting exercises, I performed a final system-health verification on Ubuntu Server.
+
+I used `systemctl is-system-running` to check the overall systemd state. The command returned `running`, indicating that the system was operating normally according to systemd.
+
+I then used `systemctl --failed --no-pager` to identify any failed systemd units.
+
+The output reported `0 loaded units listed`, confirming that no failed systemd units were detected at the time of verification.
+
+After completing these checks, I shut down the virtual machine cleanly and preserved the finished lab environment using **Checkpoint 04 — Linux Security and Troubleshooting Verified**, while retaining the original baseline and previous checkpoints.
+
+This final verification demonstrated the importance of checking system health after administrative changes, confirming recovery results, and preserving a stable environment for future troubleshooting or reference.
+
+![Final system health verification](Portfolio-Screenshots/P02-16-Final-System-Health-Verification-Annotated.png)
+
 ## Key Skills Demonstrated
 
 **Linux administration**
